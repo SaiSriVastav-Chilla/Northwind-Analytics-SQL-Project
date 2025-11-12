@@ -53,7 +53,7 @@ FROM products
 ORDER BY unitPrice DESC
 LIMIT 5;
 
-3. Running Total of Sales per Customer
+2. Running Total of Sales per Customer
    
 WITH SalesCTE AS (
   SELECT o.customerID, o.orderID,
@@ -66,7 +66,7 @@ SELECT customerID, orderID, sale,
 FROM SalesCTE
 ORDER BY customerID, orderID;
 
-5. Employee Sales Above $100,000
+3. Employee Sales Above $100,000
 
 WITH EmployeeSales AS (
   SELECT e.employeeID, e.employeeName,
